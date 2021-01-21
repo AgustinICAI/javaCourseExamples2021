@@ -1,3 +1,5 @@
+## PENDIENTE ACTUALIZAR AL 2021
+
 ## Práctica Final. Programación Orientada a Objetos. 
 ### Desarrollo de un software pseudo-comercial con interfaz gráfica 
 El alumno podrá elegir entre desarrollar una aplicación Swing que gestione un tipo cualquiera de objeto (A) o desarrollar un JPaint. Ambas aplicaciones tendrán persitencia en disco. 

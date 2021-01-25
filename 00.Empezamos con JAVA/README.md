@@ -18,7 +18,7 @@
 Importancia del licenciamiento:  Software comercial - Trial, Software gratuito, software opensource
 
 Instalar Java SE - Openjdk (java y javac)
-[JAVA openjdk 13](https://jdk.java.net/java-se-ri/13)
+[JAVA openjdk 15](https://jdk.java.net/15/)
 
 Actualizar el PATH de tu máquina para incluir ./bin
 [Modificacion Path](https://www.java.com/en/download/help/path.xml)

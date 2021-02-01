@@ -87,6 +87,24 @@ public class Persona
     
   }
   
+  public Pelicula getPeliculaFavorita()
+  {
+    return this.peliculaFavorita;
+  }
+  
+  public void setPeliculaFavorita(Pelicula p)
+  {
+    this.peliculaFavorita = p;
+  }
+  
+  
+  //Va un poco en contra del encapsulamiento
+  /*public String getNombrePeliculaFavorita()
+  {
+    return this.peliculaFavorita.getNombre();
+  }*/
+  
+  
   public String getInfo()
   {
     if (this.getApellido2() == null)

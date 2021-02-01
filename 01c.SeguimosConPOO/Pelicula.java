@@ -10,6 +10,12 @@ public class Pelicula
     this.nombre = nombre;
   }
   
+  public Pelicula(String nombre, int duracion)
+  {
+    this.nombre = nombre;
+    this.duracion = duracion;
+  }
+  
   public Pelicula(String nombre,String director, int duracion, String genero)
   {
     this(nombre);

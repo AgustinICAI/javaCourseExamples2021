@@ -7,6 +7,7 @@ public class Persona
   private String apellido2; //LOS OBJETOS (en este caso de tipo String) POR DEFECTO SE INICIALIZAN A "null"
   private int edad; //LOS TIPOS PRIMITIVOS DEPENDIENDO DEL TIPO PRIMITIVO, los int a 0
   private String direccion;
+  private String sexo;
   
   static final int EDADMAYORIAEDAD = 18;
   static int EDAD_LIMITE_SUPERIOR = 140;  
@@ -18,11 +19,12 @@ public class Persona
   
   }
   
-  public Persona(String nombre, String apellido1, int edad)
+  public Persona(String nombre, int edad,String sexo)
   {
     this.nombre = nombre;
     this.apellido1 = apellido1;
     this.setEdad(edad);
+    this.sexo = sexo;
   }
   
   public Persona(String nombre, String apellido1)
@@ -75,6 +77,11 @@ public class Persona
     return this.getEdad() >= EDADMAYORIAEDAD;
   }
   
+  public String getSexo()
+  {
+		return sexo;
+  }
+  
   public String isMayorEdadTexto()
   {
     if(this.isMayorEdad() == true)
@@ -86,12 +93,9 @@ public class Persona
   }
   
   
-  public String getInfo()
+  public String toString()
   {
-    if (this.getApellido2() == null)
-      return this.getNombre() + " " + this.getApellido1() + ", Edad: " + this.getEdad();
-    else
-      return this.getNombre() + " " + this.getApellido1() + " " + this.getApellido2() + ", Edad: " + this.getEdad();
+      return this.getNombre() + ", Edad: " + this.getEdad() + ", Sexo: " + this.getSexo();
   }
   
   static void setEDAD_LIMITE_SUPERIOR(int edad)

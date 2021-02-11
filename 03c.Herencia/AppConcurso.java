@@ -2,36 +2,42 @@ public class AppConcurso
 {
   public static void main (String argv[])
   {
-    Concursante [] concunsantes = new Concursante[30];
+    Concursante [] concursantes = new Concursante[30];
     
     
     //Hago upcasting para poder agrupar funcionalidad de todos mis concursantse
-    concunsantes[0] = new Casado("Lola", 29, "femenino");
-    concunsantes[1] = new Casado("Diego", 30, "masculino");
-    concunsantes[2] = new Soltero("Manuel",28, "masculino");
+    concursantes[0] = new Casado("Lola", 29, "femenino","10/01/2021");
+    concursantes[1] = new Casado("Diego", 30, "masculino","10/01/2021");
+    concursantes[2] = new Soltero("Manuel",28, "masculino","10/01/2021");
         
     //Hago downcasting para acceder a métodos de un objeto hijo
-    ((Casado)concunsantes[0]).setParejaActual(c2);
-    ((Casado)concunsantes[1]).setParejaActual(c1);
+    ((Casado)concursantes[0]).setParejaActual(concursantes[1]);
+    ((Casado)concursantes[1]).setParejaActual(concursantes[0]);
     
     
     for(Concursante c : concursantes)
     {
-      System.out.println (c);
-    
+      if (c!=null)
+        System.out.println (c);
     }
     
     //((Casado)c1).pedirCita(s1);
     
-    System.out.println(c1.getEstancia());
-    System.out.println(c2.getEstancia());
-    System.out.println(s1.getEstancia());
+    for(Concursante c : concursantes)
+    {
+      if (c!=null)
+        System.out.println (c.getEstancia());
+    }
     
+    System.out.println("Los solteros son");
+    for(Concursante c : concursantes)
+    {
+      if (c!=null && c instanceof Soltero )
+        System.out.println (c);
+    }
+           
     
-    
-    
-        
-    
+    concursantes[1].expulsado("11/02/2021");
     
     
   }

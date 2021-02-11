@@ -3,9 +3,9 @@ public class Casado extends Concursante
   Persona parejaActual;
   int mesesRelacion;
   
-  public Casado(String nombre, int edad,String sexo)
+  public Casado(String nombre, int edad,String sexo,String fechaEntrada)
   {
-    super(nombre,edad,sexo);
+    super(nombre,edad,sexo,fechaEntrada);
   }
   public String getEstancia()
   {
@@ -47,5 +47,10 @@ public class Casado extends Concursante
 
   }
 
+  public void expulsado(String fechaExpulsion)
+  {
+    System.out.println(this.getNombre() + " ha sido expulsado y su pareja " + this.getParejaActual().getNombre() + " también");
+    setFechaExpulsion(fechaExpulsion);
+  }
 
 }

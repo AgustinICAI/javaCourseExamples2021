@@ -1,8 +1,8 @@
 public class Soltero extends Concursante
 {  
-  public Soltero(String nombre, int edad,String sexo)
+  public Soltero(String nombre, int edad,String sexo, String fechaEntrada)
   {
-    super(nombre,edad,sexo);
+    super(nombre,edad,sexo,fechaEntrada);
   }
   
   public String getEstancia()
@@ -19,6 +19,12 @@ public class Soltero extends Concursante
            "================================================================================\n"+
            "estancia: "+ this.getEstancia() + ", Soltero"; 
 
+  }
+  
+  public void expulsado(String fechaExpulsion)
+  {
+    System.out.println(this.getNombre() + " ha sido expulsado");
+    setFechaExpulsion(fechaExpulsion);
   }
 
 }

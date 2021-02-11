@@ -7,8 +7,12 @@ public class AppConcurso
     c1.setParejaActual(c2);
     c2.setParejaActual(c1);
     
+    Concursante c3 = new Concursante("Manuel",28, "masculino");
+    
+    
     System.out.println(c1);
     System.out.println(c2);
+    System.out.println(c3);
   
   }
 

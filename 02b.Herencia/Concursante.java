@@ -43,7 +43,7 @@ public class Concursante extends Persona
   
   public String toString()
   {
-    return this.getNombre() + ", Edad: " + this.getEdad() + ", Sexo: " + this.getSexo() + "\n" +
+    return super.toString() + "\n" +
            "================================================================================\n"+
            "estancia: "+ this.getEstancia() + ", Pareja: " + this.getParejaActual().getNombre()+"\n\n"; 
     

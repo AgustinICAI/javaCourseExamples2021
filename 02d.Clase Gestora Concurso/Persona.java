@@ -92,7 +92,23 @@ public class Persona
     
   }
   
+  @Override
+  public boolean equals(Object o)
+  {
+    if (o instanceof Persona)
+    {
+      Persona p = (Persona)o;
+      //if (p.getNombre().equals(this.getNombre()) && p.getApellido1().equals(this.getApellido1()))
+      if (p.getNombre().equals(this.getNombre()) )
+        return true;
+      else return false;
+    }
+    else return false;
+    
+  } 
   
+  
+  @Override
   public String toString()
   {
       return this.getNombre() + ", Edad: " + this.getEdad() + ", Sexo: " + this.getSexo();

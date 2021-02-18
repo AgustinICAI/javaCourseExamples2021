@@ -41,7 +41,27 @@ public class Concurso
     ((Casado)c2).setParejaActual(c1);
     */
   }
-
+  public void celebrarHoguera(Soltero solteroExpulsado)
+  {
+    boolean concursanteEncontrado = false;
+    for(int i = 0; i < concursantes.length; i++)
+    {
+      if (concursantes[i] !=null && concursantes[i] instanceof Soltero && concursantes[i].equals(solteroExpulsado))
+      {
+        concursantes[i] = null;
+        concursanteEncontrado = true;
+      }
+      if (concursanteEncontrado)
+      {
+        if (i+1 < NUMTOTALCONCURSANTES)
+          concursantes[i] = concursantes[i+1];
+        else
+          concursantes[i] = null;
+      }
+    }  
+  }
+  
+  
   public void celebrarHoguera(String solteroExpulsado)
   {
     boolean concursanteEncontrado = false;

@@ -2,22 +2,24 @@ public class AppConcurso
 {
   public static void main (String argv[])
   {
+    Concurso concurso = new Concurso("2021",new Persona("Sandra","Barneda"));
     
-  
-  
+    concurso.addSoltero(new Soltero("Manuel",28, "masculino","10/01/2021"));
+    concurso.addSoltero(new Soltero("Ignacio",28, "masculino","10/01/2021"));
+    concurso.addSoltero(new Soltero("Fiama",28, "masculino","10/01/2021"));
+    concurso.addSoltero(new Soltero("Mencía",28, "masculino","10/01/2021"));
+    
+    concurso.addPareja(new Casado("Lola", 29, "femenino","10/01/2021"),new Casado("Diego", 30, "masculino","10/01/2021"));
   	
-    Concursante [] concursantes = new Concursante[30];
+    System.out.println(concurso);
     
     
-    //Hago upcasting para poder agrupar funcionalidad de todos mis concursantse
-    concursantes[0] = new Casado("Lola", 29, "femenino","10/01/2021");
-    concursantes[1] = new Casado("Diego", 30, "masculino","10/01/2021");
-    concursantes[2] = new Soltero("Manuel",28, "masculino","10/01/2021");
-        
-    //Hago downcasting para acceder a métodos de un objeto hijo
-    ((Casado)concursantes[0]).setParejaActual(concursantes[1]);
-    ((Casado)concursantes[1]).setParejaActual(concursantes[0]);
-
+    concurso.celebrarHoguera("Mencía");
+    
+    
+    System.out.println(concurso);
+    
+    
     
   }
 

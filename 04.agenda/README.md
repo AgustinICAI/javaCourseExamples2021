@@ -13,10 +13,10 @@ Las opciones que se mostrarán al usuario para trabajar con la agenda, serán:
 4. Modificar una persona concreata. Las forma de modificar una persona será modificando los valores de sus atributos, no reemplazando el objeto por otro.
 5. Mostrar el contenido del array. El número máximo de ocurrencias a crear será 10.
 
-![alt text](https://raw.githubusercontent.com/DavidContrerasICAI/javaCourseExamples/master/04.agenda/diagramaCasosUso.jpg)
+![alt text](https://raw.githubusercontent.com/AgustinICAI/javaCourseExamples2021/master/04.agenda/diagramaCasosUso.jpg)
 
 Diagrama de Casos de Uso
 
-![alt text](https://raw.githubusercontent.com/DavidContrerasICAI/javaCourseExamples/master/05.agendaPaquetes/diagramaSecuencia.jpg)
+![alt text](https://raw.githubusercontent.com/AgustinICAI/javaCourseExamples2021/master/05.agendaPaquetes/diagramaSecuencia.jpg)
 
 Diagrama de Secuencia

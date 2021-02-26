@@ -1,0 +1,2 @@
+int a = 65 -> Integer -> float -> char -> String ->
+devolver el primer carácter en mayúsculas como char -> int -> byte

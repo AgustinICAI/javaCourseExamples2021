@@ -62,7 +62,7 @@ El valor del wrapper se puede conseguir por los métodos anteriores, o equivalen
     c1 = c0;
 ```
 
-Otro método útil es el método toString(), que se utiliza para convertir objetos de envoltura en cadenas.
+Otro método útil es el método toString(), que se utiliza para convertir objetos wrappers en cadenas.
 
 En el siguiente ejemplo, convertimos un entero en un String
 

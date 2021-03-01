@@ -1,4 +1,4 @@
-## Práctica 04. Java Básico. Interfaz del objeto: equals() y toString()
+## Práctica 04. Java Básico. Interfaz del objeto: equals(), toString(). Paquetes!
 ### Crear una agenda que gestione personas.
 
 #### Funcionalidad

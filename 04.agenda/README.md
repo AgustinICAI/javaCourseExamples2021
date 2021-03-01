@@ -17,6 +17,6 @@ Las opciones que se mostrarán al usuario para trabajar con la agenda, serán:
 
 Diagrama de Casos de Uso
 
-![alt text](https://raw.githubusercontent.com/AgustinICAI/javaCourseExamples2021/master/05.agendaPaquetes/diagramaSecuencia.jpg)
+![alt text](https://raw.githubusercontent.com/AgustinICAI/javaCourseExamples2021/master/04.agenda/diagramaSecuencia.jpg)
 
 Diagrama de Secuencia

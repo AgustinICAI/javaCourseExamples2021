@@ -19,4 +19,4 @@ Pedir por teclado una palabra con la cual se trabajará:
 
 #### Métodos más importantes de la clase String
 
-![alt text](https://github.com/AgustinICAI/javaCourseExamples2021/blob/master/05p1.string/String.jpg)
+![alt text](https://github.com/AgustinICAI/javaCourseExamples2021/blob/main/05p1.string/String.jpg)

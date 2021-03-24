@@ -34,8 +34,8 @@ En primer lugar se pintarán todas las figuras y con retardos de 1 segundo se oc
 dibujo.ocultarGrupo("Grupo Azul");
 ```
 
-![alt text](https://github.com/AgustinICAI/javaCourseExamples2021/blob/master/07p2.dibujoGrupos/output1.jpg)
 
+![alt text](https://raw.githubusercontent.com/AgustinICAI/javaCourseExamples2021/master/07p2.dibujoGrupos/output1.jpg)
 Cuando se hayan ocultado todos los grupos, se mostrarán todas las figuras.
 
 

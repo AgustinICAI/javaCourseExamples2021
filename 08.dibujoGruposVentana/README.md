@@ -18,3 +18,6 @@ La comunicación de los objetos variará en esta práctica. Observad la nueva co
 
 ![alt text](https://raw.githubusercontent.com/AgustinICAI/javaCourseExamples2021/master/08.dibujoGruposVentana/output.jpg)
 
+##### Introduciendo eventos en nuestros botones
+
+Modificar la práctica de Dibujo anterior para que la aplicación gestione los eventos y pueda pintar las figuras cuado el usuario desee.

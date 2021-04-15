@@ -50,4 +50,15 @@ public class Persona {
             this.velocidadY = velocidadY;
         else
             throw new MalformedPersonaException("Velocidad excesiva");    }
+
+    public void actualizaPosicion(Dimension panelSize) {
+        int x = (int)(this.posicion.getX() + this.velocidadX);
+        int y = (int)(this.posicion.getY() + this.velocidadY);
+        this.posicion = new Point(x,y);
+        if(x>panelSize.getWidth() || x < 0)
+            this.velocidadX = -this.velocidadX;
+        if(y>panelSize.getHeight() || y < 0)
+            this.velocidadY = -this.velocidadY;
+
+    }
 }

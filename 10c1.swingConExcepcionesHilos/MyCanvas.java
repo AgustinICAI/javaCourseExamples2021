@@ -51,6 +51,22 @@ class MyCanvas extends JPanel {
                 nombre = null;
             }
         });
+
+
+        Timer t1 = new Timer(30, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                for (Persona p : jVentana.getPersonas())
+                {
+                    p.actualizaPosicion(MyCanvas.this.getSize());
+                }
+                MyCanvas.this.repaint();
+            }
+        });
+        t1.start();
+
+
     }
 
 

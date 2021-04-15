@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import javax.swing.Timer;
 
 public class JVentana extends JFrame
 {
@@ -12,6 +13,13 @@ public class JVentana extends JFrame
     JButton jbtnBorrar;
     JTextField jtxtNombre,jtxtVelocidadX,jtxtVelocidadY;
     MyCanvas myCanvas;
+    JPanel pnlSouth;
+
+
+
+    public void setPnlSouth(JPanel pnlSouth) {
+        this.pnlSouth = pnlSouth;
+    }
 
     HashSet<Persona> personas = new HashSet<>();
 
@@ -24,7 +32,7 @@ public class JVentana extends JFrame
     {
         super("Formulario ICAI");
         //POR DEFECTO EL LAYOUT DE UN JFRAME ES UN BORDERLAYOUT
-        JPanel pnlSouth = new JPanel();
+        pnlSouth = new JPanel();
         pnlSouth.setBackground(Color.YELLOW);
         this.add(pnlSouth,BorderLayout.SOUTH);
         jbtnEnviar = new JButton("ENVIAR");
@@ -114,6 +122,38 @@ public class JVentana extends JFrame
 
         this.setVisible(true);
         myCanvas.repaint();
+
+        /*Thread hcc = new HiloCambiaColor(this);
+        hcc.start();*/
+        /*
+        HiloCambiaColor2 hcc2 = new HiloCambiaColor2(this);
+        Thread t1 = new Thread(hcc2);
+        t1.start();*/
+        /*
+        Thread t1 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true) {
+                    pnlSouth.setBackground(new Color((int) (255 * Math.random()), (int) (255 * Math.random()), (int) (255 * Math.random())));
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+        t1.start();
+        */
+
+        Timer t = new Timer(2000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pnlSouth.setBackground(new Color((int) (255 * Math.random()), (int) (255 * Math.random()), (int) (255 * Math.random())));
+            }
+        });
+        t.start();
+
     }
     public HashSet<Persona> getPersonas() {
         return personas;
@@ -141,6 +181,9 @@ public class JVentana extends JFrame
             JOptionPane.showMessageDialog(this,"Revisar los valores metidos","ERROR",JOptionPane.ERROR_MESSAGE);
         }
 
+    }
+    public JPanel getPnlSouth() {
+        return pnlSouth;
     }
 
 }

@@ -1,6 +1,6 @@
 package icai.examen.diciembre2014.domain;
 
-public Envio implements Comparable
+public abstract Envio implements Comparable
 {
   private String identificador;
   private boolean urgente;
@@ -21,6 +21,10 @@ public Envio implements Comparable
     else
       return -1;
   }
+
+  public abstract double getFactorCarga();
+
+  public abstract double getCosteBase();
 
   
 

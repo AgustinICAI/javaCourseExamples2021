@@ -9,6 +9,8 @@ public class Circulo extends Figura
 		@param x Posición x de la ventana en pixels
 		@param y Posición x de la ventana en pixels
 		@param radio Tamaño del cuadrado en pixels
+		@param relleno Variable para indicar si va relleno
+		@param color Si tiene color
 	*/
 	Circulo(int x, int y, boolean relleno, Color color, int radio)
 	{

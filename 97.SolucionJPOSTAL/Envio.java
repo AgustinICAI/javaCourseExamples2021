@@ -10,6 +10,18 @@ public abstract Envio implements Comparable
   
   static double COSTEBASE = 0.5d;
 
+
+  public Envio(String identificador)
+  {
+    this.identificador = identificador;
+  }
+
+  public boolean equals(Object o)
+  {
+    Envio e = (Envio)o;
+    return this.identificador.equals(e.getIdentificador());
+  }
+
   public int compareTo(Object o)
   {
     Envio e = (Envio)o;

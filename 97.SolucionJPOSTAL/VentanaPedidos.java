@@ -100,12 +100,15 @@ public class VentanaPedidos extends JFrame
 
   }
   
-  
+  JTextField txtEnvio;
+  HashMap<Envio,Vehiculo> envioVehiculo;
+  String envioSeleccionado;
   
   public VentanaPedidos(HashMap<Envio,Vehiculo> envioVehiculo)
   {
+    this.envioVehiculo = envioVehiculo;
     JLabel lblEnvio = new JLabel("Identificador del envio");
-    JTextField txtEnvio = new JTextField("");
+    txtEnvio = new JTextField("");
     JButton btnEnvio = new JButton("buscar");
       
     this.add(lblEnvio, BorderLayout.WEST);
@@ -131,6 +134,41 @@ public class VentanaPedidos extends JFrame
     pnlSouth.setLayout(new GridLayout (2,1));
     pnlSouth.add(pnlBotones);
     pnlSouth.add(pnlIdentificadorInexistente);
+    
+    this.add(pnlSouth, BorderLayout.SOUTH);
+    
+    btnEnvio.addActionListener(new ActionListener()
+    {
+       void actionPerformed(Event e)
+       {
+          envioSeleccionado = txtEnvio.getText();
+          if(envioVehiculo.contains(new Envio(envioSeleccionado)))
+          {
+              pnlBotones.setVisible(true);
+              pnlIdentificadorInexistente.setVisible(false);
+          }
+          else
+          {
+              pnlBotones.setVisible(false);
+              pnlIdentificadorInexistente.setVisible(true);
+              envioSeleccionado = null;
+          }
+          VentanaPedidos.this.pack();
+       }
+    });
+    
+    btnVerVehiculo.addActionListener(new ActionListener()
+    {
+       void actionPerformed(Event e)
+       {
+           if(envioSeleccionado != null)
+           {
+              Vehiculo v = envioVehiculo.get(new Envio(envioSeleccionado));
+              VentanaDialogo.show("Informacion vehiculo",v.getMatricula());
+           }
+       }
+    });
+    
 
     this.pack();
     this.setVisible(true);
